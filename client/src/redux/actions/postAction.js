@@ -43,7 +43,7 @@ export const createPost = ({content, images, auth, socket}) => async (dispatch) 
     } catch (err) {
         dispatch({
             type: GLOBALTYPES.ALERT,
-            payload: {error: err.response.data.msg}
+            payload: {error: err.response?.data?.msg}
         })
     }
 }
@@ -62,7 +62,7 @@ export const getPosts = (token) => async (dispatch) => {
     } catch (err) {
         dispatch({
             type: GLOBALTYPES.ALERT,
-            payload: {error: err.response.data.msg}
+            payload: {error: err.response?.data?.msg}
         })
     }
 }
@@ -120,7 +120,7 @@ export const likePost = ({post, auth, socket}) => async (dispatch) => {
     } catch (err) {
         dispatch({
             type: GLOBALTYPES.ALERT,
-            payload: {error: err.response.data.msg}
+            payload: {error: err.response?.data?.msg}
         })
     }
 }

@@ -33,7 +33,7 @@ export const createComment = ({post, newComment, auth, socket}) => async (dispat
         dispatch(createNotify({msg, auth, socket}))
         
     } catch (err) {
-        dispatch({ type: GLOBALTYPES.ALERT, payload: {error: err.response.data.msg} })
+        dispatch({ type: GLOBALTYPES.ALERT, payload: {error: err.response?.data?.msg} })
     }
 }
 
